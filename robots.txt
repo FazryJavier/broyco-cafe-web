@@ -1,0 +1,10 @@
+# Ganti https://broyco.example dengan domain asli sebelum deploy:
+#   sed -i 's#https://broyco.example#https://DOMAIN-KAMU#g' index.html robots.txt sitemap.xml
+
+User-agent: *
+Allow: /
+
+# Aplikasi kasir (admin & staff) tidak untuk umum — jangan diindeks
+Disallow: /kasir-broy/
+
+Sitemap: https://broyco.example/sitemap.xml
