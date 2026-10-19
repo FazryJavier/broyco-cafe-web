@@ -1,373 +1,667 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BROY. Coffee and Drawing</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <title>Broy.Co — Kedai Kopi &amp; Drawing di Arcamanik, Bandung</title>
+    <meta
+      name="description"
+      content="Broy.Co Coffee &amp; Drawing: kedai kopi bermural hitam-putih di Arcamanik, Bandung. Cicipi Boy, Roy, Opoy &amp; Yoyoy mulai Rp20 ribu. Pesan via WhatsApp."
+    />
+    <meta name="author" content="Broy.Co" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#17120f" />
+    <!-- Ganti https://broyco.example dengan domain asli (lihat catatan di robots.txt) -->
+    <link rel="canonical" href="https://broyco.example/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Broy.Co" />
+    <meta property="og:title" content="Broy.Co — Kedai Kopi &amp; Drawing di Arcamanik, Bandung" />
+    <meta
+      property="og:description"
+      content="Kedai kopi bermural hitam-putih di Arcamanik, Bandung. Ngopi dulu, nyoret kemudian."
+    />
+    <meta property="og:url" content="https://broyco.example/" />
+    <meta property="og:image" content="https://broyco.example/img/web/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo Broy.Co: gelas kopi berkaki yang sedang berlari" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Broy.Co — Kedai Kopi &amp; Drawing di Arcamanik, Bandung" />
+    <meta
+      name="twitter:description"
+      content="Kedai kopi bermural hitam-putih di Arcamanik, Bandung. Ngopi dulu, nyoret kemudian."
+    />
+    <meta name="twitter:image" content="https://broyco.example/img/web/og-image.jpg" />
+
+    <!-- Ikon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/web/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="img/web/icon-192.png" />
+    <link rel="apple-touch-icon" href="img/web/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400..700&family=Fraunces:opsz,wght@9..144,500..800&display=swap"
     />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured data: bisnis lokal + menu -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "@id": "https://broyco.example/#kedai",
+        "name": "Broy.Co — Coffee & Drawing",
+        "alternateName": "Broy.Co",
+        "description": "Kedai kopi bermural hitam-putih di Arcamanik, Bandung dengan minuman signature Boy, Roy, Opoy, dan Yoyoy.",
+        "url": "https://broyco.example/",
+        "image": [
+          "https://broyco.example/img/web/og-image.jpg",
+          "https://broyco.example/img/web/kedai-mural-960.webp",
+          "https://broyco.example/img/web/kedai-teras-960.webp"
+        ],
+        "logo": "https://broyco.example/img/web/icon-512.png",
+        "telephone": "+6285703027078",
+        "priceRange": "Rp20.000 - Rp25.000",
+        "servesCuisine": "Kopi",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Layar No.10, Cisaranten Endah, Kec. Arcamanik",
+          "addressLocality": "Kota Bandung",
+          "addressRegion": "Jawa Barat",
+          "addressCountry": "ID"
+        },
+        "hasMap": "https://goo.gl/maps/HUma9ocRt9ekUD2Z9",
+        "sameAs": ["https://www.instagram.com/broy.co/"],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "04:00",
+            "closes": "11:00"
+          }
+        ],
+        "hasMenu": {
+          "@type": "Menu",
+          "name": "Menu Signature Broy.Co",
+          "hasMenuSection": {
+            "@type": "MenuSection",
+            "name": "Signature",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Boy — Iced Coffee Milk",
+                "offers": { "@type": "Offer", "price": "23000", "priceCurrency": "IDR" }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Roy — Baileys Coffee",
+                "offers": { "@type": "Offer", "price": "24000", "priceCurrency": "IDR" }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Opoy — Black Wine",
+                "offers": { "@type": "Offer", "price": "25000", "priceCurrency": "IDR" }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Yoyoy — Japanese Lemon",
+                "offers": { "@type": "Offer", "price": "20000", "priceCurrency": "IDR" }
+              }
+            ]
+          }
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Di mana lokasi Broy.Co?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Broy.Co berada di Jl. Layar No.10, Cisaranten Endah, Kec. Arcamanik, Kota Bandung, Jawa Barat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Jam berapa Broy.Co buka?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Broy.Co buka pukul 04.00 sampai 11.00 WIB."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa harga minuman signature Broy.Co?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Boy (iced coffee milk) Rp23.000, Roy (Baileys coffee) Rp24.000, Opoy (black wine) Rp25.000, dan Yoyoy (Japanese lemon) Rp20.000."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana cara memesan di Broy.Co?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Datang langsung ke kedai, atau hubungi kami lewat WhatsApp di +62 857 0302 7078 untuk menanyakan menu dan pesanan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apa maksud Coffee & Drawing di Broy.Co?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Coffee & Drawing adalah tagline Broy.Co: kopi dan gambar berjalan bersama, lewat mural hitam-putih di dinding, karakter minuman signature, dan ruang santai untuk berlama-lama."
+            }
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
+    <a class="skip-link" href="#konten">Lompat ke konten utama</a>
+
+    <!-- Ikon (sprite) -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><path d="M7 7h.01" /></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></symbol>
+    </svg>
+
     <!-- Header -->
-    <div class="header" id="home">
-      <nav id="navbar">
-        <a href="#home" class="logo">Broy.Co</a>
-        <!-- <img src="img/logo.png" alt="" /> -->
-        <div class="links" id="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#blog">Blog</a>
-          <a href="#team">Signature</a>
-          <a href="#service">Menu</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div class="fas fa-bars" id="menu-btn" onclick="openmenu()"></div>
-        <div class="fa-solid fa-xmark" id="close" onclick="closemenu()"></div>
-      </nav>
-      <div class="content">
-        <h3>Where coffee meet imagination</h3>
-        <h1>
-          Start your day with <br />
-          a coffee
-        </h1>
-        <a href="http://localhost/Broyco-Cafe-Web/kasir-broy/index.php">
-          <button class="btn">Order Now</button>
+    <header class="site-header">
+      <nav class="nav" aria-label="Navigasi utama">
+        <a class="brand" href="#beranda">
+          <img src="img/web/logo-160.webp" width="44" height="44" alt="" />
+          <span>Broy.Co</span>
         </a>
-      </div>
-    </div>
-    <!-- Header End -->
-
-    <!-- About -->
-    <section class="about" id="about">
-      <div class="container">
-        <div class="image"></div>
-        <div class="about-content">
-          <h1>What makes our coffee special?</h1>
-          <h2>Where coffee meet imagination</h2>
-          <br />
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
-            tempora maiores est aut nulla dicta molestias temporibus
-            consequuntur fugiat repellendus. Nobis suscipit at beatae obcaecati?
-            Omnis, earum. Nemo, culpa? Mollitia unde dignissimos reprehenderit
-            architecto.
-          </p>
-          <!-- <a
-            href="https://www.instagram.com/broy.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button class="btn" style="color: black">About Us</button>
-          </a> -->
-        </div>
-      </div>
-    </section>
-    <!-- About End -->
-
-    <!-- Blog -->
-    <section class="blog" id="blog">
-      <h1 class="heading">Our <span>Blog</span></h1>
-      <p class="heading-description">
-        Read our blog and know more about our latest update..
-      </p>
-      <div class="container">
-        <div class="post">
-          <div class="blog-img">
-            <img src="img/blog1.jpg" alt="" />
-            <span
-              >12 <br />
-              Mei
-            </span>
-          </div>
-          <div class="blog-content">
-            <h3>By admin |<span> Broy. co</span></h3>
-            <h1>Tasty and refresing coffee</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus at minus explicabo?
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="blog-img">
-            <img src="img/blog2.jpg" alt="" />
-            <span
-              >12 <br />
-              Mei
-            </span>
-          </div>
-          <div class="blog-content">
-            <h3>By admin |<span> Broy. co</span></h3>
-            <h1>Tasty and refresing coffee</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus at minus explicabo?
-            </p>
-          </div>
-        </div>
-        <div class="post">
-          <div class="blog-img">
-            <img src="img/blog3.jpg" alt="" />
-            <span
-              >12 <br />
-              Mei
-            </span>
-          </div>
-          <div class="blog-content">
-            <h3>By admin |<span> Broy. co</span></h3>
-            <h1>Tasty and refresing coffee</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Necessitatibus at minus explicabo?
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Blog End -->
-
-    <!-- Team -->
-    <section class="team" id="team">
-      <h1 class="heading">Our <span>Signature</span></h1>
-      <p class="heading-description">
-        Long lasting tradition & true love for coffee
-      </p>
-      <div class="container">
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/signature1.jpg" alt="" />
-          </div>
-          <div class="team-content">
-            <h3>Boy</h3>
-            <p>Iced coffee milk</p>
-            <p>IDR 23.000</p>
-            <!-- <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div> -->
-          </div>
-        </div>
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/signature2.jpg" alt="" />
-          </div>
-          <div class="team-content">
-            <h3>Roy</h3>
-            <p>Baileys coffee</p>
-            <p>IDR 24.000</p>
-            <!-- <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div> -->
-          </div>
-        </div>
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/signature4.jpg" alt="" />
-          </div>
-          <div class="team-content">
-            <h3>Opoy</h3>
-            <p>Black wine</p>
-            <p>IDR 25.000</p>
-            <!-- <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div> -->
-          </div>
-        </div>
-        <div class="team-box">
-          <div class="team-img">
-            <img src="img/signature3.jpg" alt="" />
-          </div>
-          <div class="team-content">
-            <h3>Yoyoy</h3>
-            <p>Japanese lemon</p>
-            <p>IDR 20.000</p>
-            <!-- <div class="social">
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div> -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Team End -->
-
-    <!-- Menu -->
-    <section class="service" id="service">
-      <h1 class="heading">Our <span>Menu</span></h1>
-      <p class="heading-description">We open from 4 AM - 11 AM</p>
-      <div class="container">
-        <div class="service-box">
-          <div class="service-img">
-            <img src="img/menu-1.png" alt="" />
-          </div>
-          <div class="service-content">
-            <h3>Tasty and healty</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, tenetur?
-            </p>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-img">
-            <img src="img/menu-2.png" alt="" />
-          </div>
-          <div class="service-content">
-            <h3>Tasty and healty</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, tenetur?
-            </p>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-img">
-            <img src="img/menu-3.png" alt="" />
-          </div>
-          <div class="service-content">
-            <h3>Tasty and healty</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, tenetur?
-            </p>
-          </div>
-        </div>
-        <div class="service-box">
-          <div class="service-img">
-            <img src="img/menu-4.png" alt="" />
-          </div>
-          <div class="service-content">
-            <h3>Tasty and healty</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis, tenetur?
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Menu End -->
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-      <h1 class="heading">Contact <span>Us</span></h1>
-      <p class="heading-description">We are always here for you...</p>
-      <div class="container">
-        <a href="">
-          <div class="contact-box">
-            <div>
-              <i class="fa-solid fa-envelope"></i>
-              <h2>
-                Email address <br />
-                <span>Send email anytime</span>
-              </h2>
-            </div>
-            <div>
-              <p>admin@domain.com</p>
-              <i class="fa-solid fa-right-long"></i>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://goo.gl/maps/HUma9ocRt9ekUD2Z9"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-utama"
+          aria-label="Buka menu"
         >
-          <div class="contact-box">
-            <div>
-              <i class="fa-solid fa-location-dot"></i>
-              <h2>
-                Address <br />
-                <span>Find Us</span>
-              </h2>
-            </div>
-            <div>
-              <p>
-                Jl. Layar No.10, Cisaranten Endah, Kec. Arcamanik, <br />Kota
-                Bandung, Jawa Barat
-              </p>
-              <i class="fa-solid fa-right-long"></i>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href="https://wa.me/6285703027078"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <div class="contact-box">
-            <div>
-              <i class="fa-solid fa-phone"></i>
-              <h2>
-                Call Us <br />
-                <span>Call us anytime</span>
-              </h2>
-            </div>
-            <div>
-              <p>+62 857 0302 7078</p>
-              <i class="fa-solid fa-right-long"></i>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
-    <!-- Contact End -->
-
-    <!-- Footer -->
-    <section class="footer">
-      <div class="container">
-        <div class="footer-box">
-          <h3>about us</h3>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non
-            laborum nisi id amet sit? Cum, rem? Nam, in at. Officiis?
-          </p>
-          <p>
-            Copyrights &copy; 2023 All rights reserved By
-            <a href="">Broy.Co</a>
-          </p>
-        </div>
-        <div class="footer-box">
-          <h3>Newsletter</h3>
-          <p>Stay update with our latests</p>
-          <form>
-            <input type="email" name="email" placeholder="admin@gmail.com" />
-            <button type="submit">
-              <i class="fa-solid fa-right-long"></i>
-            </button>
-          </form>
-        </div>
-        <div class="footer-box">
-          <h3>Follow Us</h3>
-          <p>Connect With Us On:</p>
-          <div>
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+        <ul class="nav-links" id="menu-utama">
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#cerita">Cerita</a></li>
+          <li><a href="#signature">Signature</a></li>
+          <li><a href="#suasana">Suasana</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kunjungi">Kunjungi</a></li>
+          <li>
             <a
-              href="https://www.instagram.com/broy.co/"
+              class="btn btn--primary btn--sm"
+              href="https://wa.me/6285703027078?text=Halo%20Broy.Co%2C%20aku%20mau%20tanya%20menu%20dan%20pesan%20minuman."
               target="_blank"
               rel="noopener noreferrer"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              >Pesan</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten">
+      <!-- Hero -->
+      <section class="hero" id="beranda" aria-labelledby="judul-hero">
+        <img
+          class="hero__bg"
+          src="img/web/hero-beans.webp"
+          srcset="img/web/hero-beans-960.webp 960w, img/web/hero-beans.webp 1920w"
+          sizes="100vw"
+          width="1920"
+          height="996"
+          alt=""
+          fetchpriority="high"
+        />
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Where coffee meets imagination</p>
+            <h1 id="judul-hero">Ngopi dulu, <em>nyoret</em> kemudian.</h1>
+            <p class="hero__lead">
+              Broy.Co adalah kedai kopi &amp; ruang gambar di Arcamanik, Bandung. Segelas kopi dingin,
+              dinding mural hitam-putih, dan kursi yang bikin betah berlama-lama.
+            </p>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/6285703027078?text=Halo%20Broy.Co%2C%20aku%20mau%20tanya%20menu%20dan%20pesan%20minuman."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Pesan lewat WhatsApp</a
+              >
+              <a class="btn btn--ghost" href="#signature">
+                Kenalan sama menunya
+                <svg class="icon" aria-hidden="true"><use href="#i-arrow" /></svg>
+              </a>
+            </div>
+            <ul class="facts" aria-label="Info singkat">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-tag" /></svg>Mulai Rp20 ribu</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-clock" /></svg>Buka 04.00–11.00</li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-pin" /></svg>Arcamanik, Bandung</li>
+            </ul>
+          </div>
+          <div class="hero__art">
+            <img
+              class="badge"
+              src="img/web/logo-640.webp"
+              width="640"
+              height="640"
+              alt="Logo Broy.Co: gelas kopi berkaki dengan es batu tersenyum, sedang berlari"
+            />
+            <p class="hero__note" aria-hidden="true">mampir, jangan malu ↗</p>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- Footer End -->
+      </section>
 
-    <script src="script.js"></script>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Coffee</span><span>Drawing</span><span>Mural</span><span>Es kopi susu</span
+          ><span>Arcamanik</span><span>Bandung</span><span>Coffee</span><span>Drawing</span
+          ><span>Mural</span><span>Es kopi susu</span><span>Arcamanik</span><span>Bandung</span>
+        </div>
+      </div>
+
+      <!-- Cerita -->
+      <section class="section section--cream" id="cerita" aria-labelledby="judul-cerita">
+        <div class="container split">
+          <div class="collage reveal">
+            <img
+              class="collage__main"
+              src="img/web/kedai-mural-640.webp"
+              srcset="img/web/kedai-mural-640.webp 640w, img/web/kedai-mural-960.webp 960w"
+              sizes="(min-width: 900px) 34vw, 80vw"
+              width="640"
+              height="853"
+              loading="lazy"
+              decoding="async"
+              alt="Dinding mural hitam-putih penuh karakter kartun di Broy.Co, dengan cermin berbingkai ukiran dan meja marmer bulat"
+            />
+            <img
+              class="collage__small"
+              src="img/web/kedai-bar-640.webp"
+              width="640"
+              height="853"
+              loading="lazy"
+              decoding="async"
+              alt="Bar kopi Broy.Co dengan mesin giling, botol sirup, dan dinding bata terakota"
+            />
+          </div>
+          <div class="split__copy reveal">
+            <p class="eyebrow eyebrow--dark">Cerita kami</p>
+            <h2 id="judul-cerita">Kedai kecil, kopinya serius, coretannya santai.</h2>
+            <p>
+              Di Broy.Co, kopi dan gambar jalan bareng. Dindingnya penuh mural hitam-putih karakter-karakter
+              nyeleneh, bar kopinya terbuka supaya kamu bisa lihat minumanmu dibuat, dan terasnya berlampu
+              gantung dengan bangku bar yang pas buat ngobrol.
+            </p>
+            <p>
+              Kamu tidak perlu jadi seniman atau barista untuk betah di sini. Datang, pesan satu gelas, bawa
+              buku sketsa (atau cuma ponsel), lalu biarkan obrolan mengalir sendiri.
+            </p>
+            <ul class="pillars">
+              <li>
+                <h3>Kopi</h3>
+                <p>Menu singkat yang dijaga rasanya, dari kopi susu dingin sampai racikan beraroma Baileys.</p>
+              </li>
+              <li>
+                <h3>Gambar</h3>
+                <p>Boy, Roy, Opoy, dan Yoyoy menjadi wajah tiap minuman andalan kami.</p>
+              </li>
+              <li>
+                <h3>Ruang</h3>
+                <p>Teras bar, sudut meja marmer, dan bar kopi terbuka. Pilih spot sesukamu.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Signature -->
+      <section class="section section--roast" id="signature" aria-labelledby="judul-signature">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow">Meet the gang</p>
+            <h2 id="judul-signature">Empat karakter, empat gelas andalan</h2>
+            <p>
+              Setiap minuman signature punya wajahnya sendiri, lengkap dengan poster “buronan” khas Broy.Co.
+              Pilih yang paling cocok dengan mood-mu.
+            </p>
+          </header>
+
+          <ul class="cards">
+            <li class="card reveal">
+              <figure>
+                <img
+                  src="img/web/sig-boy.webp"
+                  width="720"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Poster karakter Boy bertopi huruf B dengan papan bertuliskan Iced coffee milk"
+                />
+                <span class="card__price"><span class="sr-only">Harga </span>Rp 23.000</span>
+              </figure>
+              <div class="card__body">
+                <h3>Boy</h3>
+                <p class="card__drink">Iced coffee milk</p>
+                <p>Si paling santai. Kopi susu dingin yang ramah di lidah siapa saja.</p>
+              </div>
+            </li>
+            <li class="card reveal">
+              <figure>
+                <img
+                  src="img/web/sig-roy.webp"
+                  width="720"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Poster karakter Roy berambut panjang tebal dengan papan bertuliskan Baileys coffee"
+                />
+                <span class="card__price"><span class="sr-only">Harga </span>Rp 24.000</span>
+              </figure>
+              <div class="card__body">
+                <h3>Roy</h3>
+                <p class="card__drink">Baileys coffee</p>
+                <p>Si gondrong yang gampang tertawa. Kopi dengan sentuhan rasa Baileys untuk yang suka sedikit beda.</p>
+              </div>
+            </li>
+            <li class="card reveal">
+              <figure>
+                <img
+                  src="img/web/sig-opoy.webp"
+                  width="720"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Poster karakter Opoy berjambul punk dan berkacamata bulat dengan papan bertuliskan Black wine"
+                />
+                <span class="card__price"><span class="sr-only">Harga </span>Rp 25.000</span>
+              </figure>
+              <div class="card__body">
+                <h3>Opoy</h3>
+                <p class="card__drink">Black wine</p>
+                <p>Si anak punk berkacamata bulat. Pilihan paling gelap dan berani di daftar kami.</p>
+              </div>
+            </li>
+            <li class="card reveal">
+              <figure>
+                <img
+                  src="img/web/sig-yoyoy.webp"
+                  width="720"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Poster karakter Yoyoy berjeans sobek dengan papan bertuliskan Japanese lemon"
+                />
+                <span class="card__price"><span class="sr-only">Harga </span>Rp 20.000</span>
+              </figure>
+              <div class="card__body">
+                <h3>Yoyoy</h3>
+                <p class="card__drink">Japanese lemon</p>
+                <p>Si jangkung berjeans sobek. Segar dan asam-manis, penyeimbang kalau kopi terasa terlalu berat.</p>
+              </div>
+            </li>
+          </ul>
+
+          <p class="section__foot reveal">
+            Harga dapat berubah sewaktu-waktu. Mau tanya menu lengkap?
+            <a
+              href="https://wa.me/6285703027078?text=Halo%20Broy.Co%2C%20boleh%20minta%20menu%20lengkapnya%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Tanya lewat WhatsApp</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- Suasana -->
+      <section class="section section--cream" id="suasana" aria-labelledby="judul-suasana">
+        <div class="container">
+          <header class="section__head reveal">
+            <p class="eyebrow eyebrow--dark">Suasana</p>
+            <h2 id="judul-suasana">Tempat yang enak buat berlama-lama</h2>
+            <p>Intip sudut-sudut Broy.Co sebelum kamu mampir.</p>
+          </header>
+
+          <div class="gallery" role="group" aria-label="Galeri foto Broy.Co" tabindex="0">
+            <figure class="shot reveal">
+              <img
+                src="img/web/kedai-bar-640.webp"
+                srcset="img/web/kedai-bar-640.webp 640w, img/web/kedai-bar-960.webp 960w"
+                sizes="(min-width: 900px) 30vw, 90vw"
+                width="640"
+                height="853"
+                loading="lazy"
+                decoding="async"
+                alt="Bar kopi Broy.Co dengan botol sirup, mesin giling kopi, dan poster papan seluncur di dinding bata"
+              />
+              <figcaption>Bar kopi, tempat semua racikan dibuat.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <img
+                src="img/web/kedai-teras-640.webp"
+                srcset="img/web/kedai-teras-640.webp 640w, img/web/kedai-teras-960.webp 960w"
+                sizes="(min-width: 900px) 30vw, 90vw"
+                width="640"
+                height="853"
+                loading="lazy"
+                decoding="async"
+                alt="Teras Broy.Co dengan meja bar panjang, bangku hitam, lampu gantung, dan tirai bambu"
+              />
+              <figcaption>Teras bar dengan lampu gantung dan tirai bambu.</figcaption>
+            </figure>
+            <figure class="shot reveal">
+              <img
+                src="img/web/kedai-mural-640.webp"
+                srcset="img/web/kedai-mural-640.webp 640w, img/web/kedai-mural-960.webp 960w"
+                sizes="(min-width: 900px) 30vw, 90vw"
+                width="640"
+                height="853"
+                loading="lazy"
+                decoding="async"
+                alt="Sudut duduk Broy.Co dengan meja marmer bulat, kursi kayu hitam, dan mural hitam-putih"
+              />
+              <figcaption>Mural hitam-putih dan meja marmer bulat.</figcaption>
+            </figure>
+          </div>
+
+          <div class="banner reveal">
+            <img
+              src="img/web/cheers-800.webp"
+              srcset="img/web/cheers-800.webp 800w, img/web/cheers-1600.webp 1600w"
+              sizes="(min-width: 1200px) 1100px, 100vw"
+              width="1600"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              alt="Tiga tangan bersulang dengan dua cangkir latte art dan segelas kopi hitam es"
+            />
+            <div class="banner__copy">
+              <h3>Ajak satu teman, atau tiga.</h3>
+              <p>Kopi terasa lebih enak kalau dinikmati bareng. Hubungi kami untuk tanya menu dan pesanan.</p>
+              <a
+                class="btn btn--primary"
+                href="https://wa.me/6285703027078?text=Halo%20Broy.Co%2C%20aku%20mau%20tanya%20menu%20dan%20pesan%20minuman."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chat WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section section--latte" id="faq" aria-labelledby="judul-faq">
+        <div class="container container--narrow">
+          <header class="section__head reveal">
+            <p class="eyebrow eyebrow--dark">Sering ditanyakan</p>
+            <h2 id="judul-faq">Sebelum kamu mampir</h2>
+          </header>
+
+          <div class="faq reveal">
+            <details>
+              <summary>Di mana lokasi Broy.Co?</summary>
+              <p>
+                Jl. Layar No.10, Cisaranten Endah, Kec. Arcamanik, Kota Bandung, Jawa Barat. Buka petanya lewat
+                bagian <a href="#kunjungi">Kunjungi</a>.
+              </p>
+            </details>
+            <details>
+              <summary>Jam berapa Broy.Co buka?</summary>
+              <p>Kami buka pukul 04.00 sampai 11.00 WIB.</p>
+            </details>
+            <details>
+              <summary>Berapa harga minuman signature?</summary>
+              <p>
+                Boy (iced coffee milk) Rp23.000, Roy (Baileys coffee) Rp24.000, Opoy (black wine) Rp25.000, dan
+                Yoyoy (Japanese lemon) Rp20.000.
+              </p>
+            </details>
+            <details>
+              <summary>Bagaimana cara memesan?</summary>
+              <p>
+                Datang langsung ke kedai, atau hubungi kami lewat WhatsApp di
+                <a href="https://wa.me/6285703027078" target="_blank" rel="noopener noreferrer">+62 857 0302 7078</a>
+                untuk menanyakan menu dan pesanan.
+              </p>
+            </details>
+            <details>
+              <summary>Apa maksud “Coffee &amp; Drawing”?</summary>
+              <p>
+                Itu tagline kami: kopi dan gambar berjalan bersama. Kamu bisa merasakannya lewat mural hitam-putih
+                di dinding, karakter minuman signature, dan ruang santai untuk berlama-lama.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kunjungi -->
+      <section class="section section--ink" id="kunjungi" aria-labelledby="judul-kunjungi">
+        <div class="container split split--visit">
+          <div class="split__copy reveal">
+            <p class="eyebrow">Kunjungi kami</p>
+            <h2 id="judul-kunjungi">Mampir ke Arcamanik</h2>
+            <dl class="visit">
+              <div>
+                <dt>Alamat</dt>
+                <dd>Jl. Layar No.10, Cisaranten Endah, Kec. Arcamanik, Kota Bandung, Jawa Barat</dd>
+              </div>
+              <div>
+                <dt>Jam buka</dt>
+                <dd>04.00 – 11.00 WIB</dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd>
+                  <a href="https://wa.me/6285703027078" target="_blank" rel="noopener noreferrer"
+                    >+62 857 0302 7078</a
+                  >
+                </dd>
+              </div>
+              <div>
+                <dt>Instagram</dt>
+                <dd>
+                  <a href="https://www.instagram.com/broy.co/" target="_blank" rel="noopener noreferrer"
+                    >@broy.co</a
+                  >
+                </dd>
+              </div>
+            </dl>
+            <div class="hero__actions">
+              <a
+                class="btn btn--primary"
+                href="https://goo.gl/maps/HUma9ocRt9ekUD2Z9"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Buka di Google Maps</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="https://wa.me/6285703027078?text=Halo%20Broy.Co%2C%20aku%20mau%20tanya%20menu%20dan%20pesan%20minuman."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chat WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="map reveal">
+            <iframe
+              title="Peta lokasi Broy.Co di Arcamanik, Bandung"
+              src="https://www.google.com/maps?q=Jl.+Layar+No.10,+Cisaranten+Endah,+Arcamanik,+Bandung&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#beranda">
+            <img src="img/web/logo-160.webp" width="44" height="44" alt="" loading="lazy" />
+            <span>Broy.Co</span>
+          </a>
+          <p>Coffee &amp; Drawing. Kedai kopi bermural hitam-putih di Arcamanik, Bandung.</p>
+        </div>
+        <nav aria-label="Navigasi footer">
+          <h2 class="footer__title">Jelajahi</h2>
+          <ul>
+            <li><a href="#cerita">Cerita</a></li>
+            <li><a href="#signature">Signature</a></li>
+            <li><a href="#suasana">Suasana</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#kunjungi">Kunjungi</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="footer__title">Ikuti kami</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/broy.co/" target="_blank" rel="noopener noreferrer">Instagram @broy.co</a></li>
+            <li><a href="https://wa.me/6285703027078" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <p>&copy; <span id="tahun">2026</span> Broy.Co. Semua hak dilindungi.</p>
+        <a href="kasir-broy/" rel="nofollow">Login staff</a>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
